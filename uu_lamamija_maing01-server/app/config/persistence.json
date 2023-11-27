@@ -1,0 +1,16 @@
+{
+  "uuSubAppDataStore": {
+    "primary": {
+      "type": "uuAppObjectStore",
+      "realization": "MongoDB",
+      "schemaMap": {
+        "lamamijaMain": {
+          "realization": "dao/LamamijaMainMongo"
+        },
+        "food": {
+          "realization": "dao/FoodMongo"
+        }
+      }
+    }
+  }
+}
