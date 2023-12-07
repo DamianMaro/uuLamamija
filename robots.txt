@@ -4,3 +4,7 @@
 User-agent: *
 Disallow:
 
+
+#mruzlina
+#mruuuz
+
