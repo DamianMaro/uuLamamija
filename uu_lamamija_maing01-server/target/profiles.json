@@ -503,6 +503,10 @@
       "food/create": {
         "sysStateList": ["active"],
         "profileList": ["Authorities"]
+      },
+      "cart/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities"]
       }
     }
   }

@@ -11,6 +11,9 @@
         "food": {
           "realization": "dao/FoodMongo"
         },
+        "cart": {
+          "realization": "dao/CartMongo"
+        },
         "sysAuditLogRecord": {
           "realization": "uu_appg01_auditlog:dao/SysAuditLogRecordMongo"
         },

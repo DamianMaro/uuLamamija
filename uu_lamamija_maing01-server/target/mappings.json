@@ -533,6 +533,11 @@
         "realization": "api/controllers/FoodController.create",
         "httpMethod": "POST",
         "type": "CMD"
+      },
+      "cart/update": {
+        "realization": "api/controllers/CartController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
       }
     }
   },

@@ -24,7 +24,7 @@ class LamamijaMainAbl {
   async init(uri, dtoIn, session) {
     const awid = uri.getAwid();
     // HDS 1
-    let validationResult = this.validator.validate("cartUpdateDtoInType", dtoIn);
+    let validationResult = this.validator.validate("initDtoInType", dtoIn);
     // A1, A2
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
