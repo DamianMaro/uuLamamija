@@ -18,11 +18,11 @@ const Create = {
     constructor() {
       super(...arguments);
       this.code = `${Create.UC_CODE}daoCreateFailed`;
-      this.message = "Creating joke by dao create has failed.";
+      this.message = "Creating food by dao create has failed.";
     }
-  }
+  },
 };
 
 module.exports = {
-  Create
+  Create,
 };

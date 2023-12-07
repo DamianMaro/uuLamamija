@@ -15,7 +15,7 @@ class FoodAbl {
 
   async create(awid, dtoIn) {
     // HDS 1
-    let validationResult = this.validator.validate("FoodCreateDtoInType", dtoIn);
+    let validationResult = this.validator.validate("foodCreateDtoInType", dtoIn);
     // A1, A2
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
