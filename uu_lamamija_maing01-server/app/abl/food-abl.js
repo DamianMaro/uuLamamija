@@ -5,7 +5,11 @@ const { DaoFactory } = require("uu_appg01_server").ObjectStore;
 const { ValidationHelper } = require("uu_appg01_server").AppServer;
 const Errors = require("../api/errors/food-error.js");
 
-const WARNINGS = {};
+const WARNINGS = {
+  createUnsupportedKeys: {
+    code: `${Errors.Create.UC_CODE}unsupportedKeys`,
+  },
+};
 
 class FoodAbl {
   constructor() {
@@ -20,7 +24,7 @@ class FoodAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
+      WARNINGS.createUnsupportedKeys.code,
       Errors.Create.InvalidDtoIn
     );
 
