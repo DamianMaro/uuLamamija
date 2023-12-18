@@ -5,7 +5,11 @@ const { DaoFactory } = require("uu_appg01_server").ObjectStore;
 const { ValidationHelper } = require("uu_appg01_server").AppServer;
 const Errors = require("../api/errors/cart-error.js");
 
-const WARNINGS = {};
+const WARNINGS = {
+  CartUnsupportedKeys:{
+    code: `${Errors.Cart.UC_CODE}unsupportedKeys`,
+  },
+};
 
 class CartAbl {
   constructor() {
@@ -20,15 +24,15 @@ class CartAbl {
     let uuAppErrorMap = ValidationHelper.processValidationResult(
       dtoIn,
       validationResult,
-      WARNINGS.initUnsupportedKeys.code,
-      Errors.Update.InvalidDtoIn
+      WARNINGS.CartUnsupportedKeys.code,
+      Errors.Cart.InvalidDtoIn
     );
 
     let dtoOut;
     try {
       dtoOut = this.dao.update();
     } catch (e) {
-      throw new Errors.Update.DaoCreateFailed({ uuAppErrorMap }, e);
+      throw new Errors.Cart.DaoUpdateFailed({ uuAppErrorMap }, e);
     }
 
     return {
